@@ -1,0 +1,52 @@
+{
+  "name": "code_challange",
+  "version": "1.0.0",
+  "description": "Project contains the rest api for the code challange",
+  "main": "index.js",
+  "scripts": {
+    "start": "node bin/www.js",
+    "dev": "nodemon bin/www.js",
+    "build": "docker-compose up",
+    "mocha": "nyc mocha --timeout=5000 --exit",
+    "test": "npm run mocha"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "dotenv": "^8.0.0",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "md5": "^2.2.1",
+    "morgan": "~1.9.1",
+    "request": "^2.88.2",
+    "winston": "^3.3.3",
+    "mongoose": "^5.9.26",
+    "mongoose-paginate-v2": "^1.3.9",
+    "validator": "^13.1.1",
+    "express-validator": "^6.6.0",
+    "trim-request": "^1.0.6"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.0",
+    "@types/jest": "^24.0.15",
+    "@types/sequelize": "^4.28.3",
+    "@types/supertest": "^2.0.7",
+    "jest": "^24.8.0",
+    "nodemon": "^1.19.1",
+    "supertest": "^4.0.2",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "faker": "^4.1.0",
+    "nyc": "^15.1.0",
+    "mocha": "^8.1.0"
+  },
+  "author": "hamza",
+  "license": "ISC"
+}
